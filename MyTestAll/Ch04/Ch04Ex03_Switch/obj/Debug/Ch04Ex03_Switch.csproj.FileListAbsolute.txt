@@ -1,0 +1,7 @@
+E:\code\MyCSharpProj\MyTestAll\Ch04Ex03_Switch\Ch04Ex03_Switch\bin\Debug\Ch04Ex03_Switch.exe.config
+E:\code\MyCSharpProj\MyTestAll\Ch04Ex03_Switch\Ch04Ex03_Switch\bin\Debug\Ch04Ex03_Switch.exe
+E:\code\MyCSharpProj\MyTestAll\Ch04Ex03_Switch\Ch04Ex03_Switch\bin\Debug\Ch04Ex03_Switch.pdb
+E:\code\MyCSharpProj\MyTestAll\Ch04Ex03_Switch\Ch04Ex03_Switch\obj\Debug\Ch04Ex03_Switch.csprojResolveAssemblyReference.cache
+E:\code\MyCSharpProj\MyTestAll\Ch04Ex03_Switch\Ch04Ex03_Switch\obj\Debug\Ch04Ex03_Switch.csproj.CoreCompileInputs.cache
+E:\code\MyCSharpProj\MyTestAll\Ch04Ex03_Switch\Ch04Ex03_Switch\obj\Debug\Ch04Ex03_Switch.exe
+E:\code\MyCSharpProj\MyTestAll\Ch04Ex03_Switch\Ch04Ex03_Switch\obj\Debug\Ch04Ex03_Switch.pdb
