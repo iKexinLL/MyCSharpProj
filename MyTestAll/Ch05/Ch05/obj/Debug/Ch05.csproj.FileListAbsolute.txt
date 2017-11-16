@@ -5,3 +5,10 @@ E:\code\MyCSharpProj\Ch05\Ch05\obj\Debug\Ch05.csprojResolveAssemblyReference.cac
 E:\code\MyCSharpProj\Ch05\Ch05\obj\Debug\Ch05.csproj.CoreCompileInputs.cache
 E:\code\MyCSharpProj\Ch05\Ch05\obj\Debug\Ch05.exe
 E:\code\MyCSharpProj\Ch05\Ch05\obj\Debug\Ch05.pdb
+E:\code\MyCSharpProj\MyTestAll\Ch05\Ch05\bin\Debug\Ch05.exe.config
+E:\code\MyCSharpProj\MyTestAll\Ch05\Ch05\bin\Debug\Ch05.exe
+E:\code\MyCSharpProj\MyTestAll\Ch05\Ch05\bin\Debug\Ch05.pdb
+E:\code\MyCSharpProj\MyTestAll\Ch05\Ch05\obj\Debug\Ch05.csprojResolveAssemblyReference.cache
+E:\code\MyCSharpProj\MyTestAll\Ch05\Ch05\obj\Debug\Ch05.csproj.CoreCompileInputs.cache
+E:\code\MyCSharpProj\MyTestAll\Ch05\Ch05\obj\Debug\Ch05.exe
+E:\code\MyCSharpProj\MyTestAll\Ch05\Ch05\obj\Debug\Ch05.pdb

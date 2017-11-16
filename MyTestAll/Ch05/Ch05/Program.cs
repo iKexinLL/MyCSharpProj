@@ -17,12 +17,14 @@ namespace Ch05
 
     enum Days { Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday };
     enum BoilingPoints { Celsius = 100, Fahrenheit = 212 };
-    [FlagsAttribute]
+
+    [FlagsAttribute] // https://docs.microsoft.com/zh-cn/dotnet/api/System.FlagsAttribute?view=netframework-4.7
     enum Colors { Red = 1, Green = 2, Blue = 4, Yellow = 8 };
 
     //定义一个结构,注意结构里面的变量是有可访问性的.
     struct Route
     {
+
         public Orientation direction;
         public double distance;
     }
@@ -30,10 +32,18 @@ namespace Ch05
     class Program
     {
         // 不可以在方法里面定义
+        // 这个是在方法外
         enum BoilingPoints { Celsius = 100, Fahrenheit = 212 };
 
         static void Main(string[] args)
         {
+            //顺带测试一下 args
+            Console.WriteLine($"{args.Length} command line arguments were specified");
+            foreach (var s in args)
+                Console.WriteLine(s);
+            Console.WriteLine("args end");
+            Console.WriteLine();
+
             byte b;
             short st = 233;
             b = checked((byte)st); // check 检查溢出, 大于255会报错
@@ -57,20 +67,24 @@ namespace Ch05
             //(enumerationType)Enum.Parse(typeof(enumerationType), enumerationValueString);
             Orientation myDirection2 = (Orientation)Enum.Parse(typeof(Orientation), myString);
             Console.WriteLine($"string to enumeration, string is {myString}, enumeration is {myDirection2}");
+
             Type typeOrientation = typeof(Orientation);
             Console.WriteLine("start foreach Orientation, type is d");
-            foreach( string s in Enum.GetNames(typeOrientation))
+
+            foreach (string s in Enum.GetNames(typeOrientation))
                 Console.WriteLine(Enum.Format(typeOrientation, Enum.Parse(typeOrientation, s), "d"));
+
             Console.WriteLine("start foreach Orientation, type is f");
             foreach (string s in Enum.GetNames(typeOrientation))
                 Console.WriteLine(Enum.Format(typeOrientation, Enum.Parse(typeOrientation, s), "f"));
+
             // 强转方式
             Console.WriteLine("强转方式");
             byte tst = (byte)Enum.Parse(typeof(Orientation), myString);
             Console.WriteLine(tst);
 
             //以下为测试
-            myDirection = (Orientation)st; 
+            myDirection = (Orientation)st;
             Console.WriteLine(myDirection); // --> 直接显示233
             st = 3;
             myDirection = (Orientation)st;
@@ -107,16 +121,20 @@ namespace Ch05
             int newDirection = -1;
             double myDistance;
             Console.WriteLine("1) North\n2) South\n3) East\n4) West");
+
             do
             {
                 Console.WriteLine("Select a direction");
                 newDirection = Convert.ToInt32(Console.ReadLine());
             }
             while ((newDirection < 1) || (newDirection > 4));
+
             Console.WriteLine("Input a distance");
             myDistance = Convert.ToDouble(Console.ReadLine());
+
             myRoute.direction = (Orientation)newDirection;
             myRoute.distance = myDistance;
+
             Console.WriteLine($"myRoute specifies a direction of {myRoute.direction} " +
                 $"and a distinct of {myRoute.distance}");
 
