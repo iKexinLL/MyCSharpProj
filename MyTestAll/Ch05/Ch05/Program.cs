@@ -24,7 +24,6 @@ namespace Ch05
     //定义一个结构,注意结构里面的变量是有可访问性的.
     struct Route
     {
-
         public Orientation direction;
         public double distance;
     }
