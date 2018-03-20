@@ -1,0 +1,31 @@
+﻿<Page x:Class="App1.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:App1"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+    <!--水平按钮栏-->
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Name="HomeButton"
+                    Content="HomeButton"
+                    Margin="0,0,20,0"
+                    Click="HomeButton_OnClick" />
+            <Button Name="BackButton"
+                    Content="BackButton"
+                    Margin="0,0,20,0"
+                    Click="BackButton_OnClick" />
+            <Button Name="ForwardButton"
+                    Content="ForwardButton"
+                    Margin="0,0,20,0"
+                    Click="ForwardButton_OnClick" />
+        </StackPanel>
+        <Frame Name="MyFrame">
+
+        </Frame>
+
+    </StackPanel>
+
+
+</Page>

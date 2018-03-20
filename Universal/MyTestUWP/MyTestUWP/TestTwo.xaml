@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="App1.TestTwo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel
+            Orientation="Vertical"
+            VerticalAlignment="Top">
+            <TextBlock
+                FontSize="90">Lorem lpsum</TextBlock>
+            <StackPanel
+                Orientation="Horizontal">
+                <TextBlock
+                    Width="300"
+                    Name="TextBlockOne"
+                    FontSize="24"
+                    TextWrapping="Wrap" />
+                <TextBlock
+                    Width="300"
+                    Name="TextBlockTwo"
+                    FontSize="18"
+                    TextWrapping="Wrap" />
+                <Rectangle
+                    VerticalAlignment="Top"
+                    Width="200"
+                    Height="200"
+                    Fill="Red" />
+                <StackPanel Orientation="Vertical">
+                    <Rectangle
+                        VerticalAlignment="Top"
+                        Width="100"
+                        Height="100"
+                        Fill="Blue" />
+                    <Rectangle
+                        VerticalAlignment="Top"
+                        Width="100"
+                        Height="100"
+                        Fill="RosyBrown" />
+                </StackPanel>
+            </StackPanel>
+
+            </StackPanel>
+    </Grid>
+</Page>

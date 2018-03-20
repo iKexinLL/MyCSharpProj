@@ -1,0 +1,41 @@
+﻿<Page x:Class="App1.ButtonBackground"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:App1"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Height="400"
+      Width="400"
+      Loaded="MainPage_OnLoaded">
+    <Grid Name="LayoutGrid"
+          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button Content="Display"
+                FontSize="30"
+                HorizontalAlignment="Left"
+                Margin="109,249,0,0"
+                VerticalAlignment="Top"
+                Height="85"
+                Width="204"
+                Click="Button_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1"
+                                     StartPoint="0.5,0">
+                    <GradientStop Color="Black" />
+                    <GradientStop Color="White"
+                                  Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="TextBlockShow"
+                   HorizontalAlignment="Left"
+                   Margin="10,100,10,0"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Top" />
+        <Button Name="GoBack"
+                Content="GoBack"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Click="GoBack_OnClick"/>
+    </Grid>
+</Page>

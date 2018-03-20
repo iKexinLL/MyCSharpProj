@@ -1,0 +1,108 @@
+﻿<Page x:Class="App1.RelativePanel"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:App1"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <RelativePanel Grid.Row="0">
+            <TextBlock Name="Title"
+                       Height="100"
+                       FontSize="72"
+                       FontWeight="Bold"
+                       Text="Title"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       FontFamily="Segoe UI" />
+            <Button Name="SearchButton"
+                    Content="Search"
+                    FontSize="48"
+                    RelativePanel.AlignRightWithPanel="True"
+                    RelativePanel.AlignVerticalCenterWith="Title"
+                    FontFamily="Segoe UI" />
+            <TextBox Name="SearchTextBox"
+                     FontSize="48"
+                     RelativePanel.LeftOf="SearchButton"
+                     RelativePanel.AlignVerticalCenterWith="Title"
+                     Margin="0,0,50,0"
+                     Width="300" />
+            <TextBlock Name="SearchTextBlock"
+                       Text="Search: "
+                       FontSize="48"
+                       RelativePanel.LeftOf="SearchTextBox"
+                       RelativePanel.AlignVerticalCenterWith="Title"
+                       Margin="0,0,50,0" />
+        </RelativePanel>
+        <RelativePanel Grid.Row="1"
+                       MinHeight="300">
+            <Rectangle Name="RedRect"
+                       Height="200"
+                       Width="200"
+                       Fill="Red"
+                       RelativePanel.AlignRightWithPanel="True" />
+            <Rectangle Name="YellowRect"
+                       Height="100"
+                       Width="100"
+                       Fill="Yellow"
+                       RelativePanel.AlignRightWithPanel="True" />
+            <Rectangle Name="BlueRect"
+                       Height="100"
+                       Width="100"
+                       Fill="Blue"
+                       RelativePanel.AlignLeftWith="RedRect" />
+            <Rectangle Name="BisqueRect"
+                       Height="100"
+                       Width="100"
+                       Fill="Bisque"
+                       RelativePanel.LeftOf="RedRect" />
+            <Rectangle Name="GreenRect"
+                       Height="100"
+                       Width="100"
+                       Fill="Green"
+                       RelativePanel.AlignVerticalCenterWith="RedRect"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True" />
+            <Rectangle Name="PurpleRect"
+                       Fill="Purple"
+                       MinHeight="100"
+                       MinWidth="10"
+                       RelativePanel.Below="RedRect"
+                       RelativePanel.AlignLeftWith="GreenRect"
+                       RelativePanel.AlignRightWithPanel="True" />
+            <Rectangle Name="AquaRect"
+                       Fill="Aqua"
+                       MinHeight="100"
+                       MinWidth="100"
+                       RelativePanel.AlignBottomWithPanel="True"
+                       RelativePanel.AlignTopWith="PurpleRect" />
+        </RelativePanel>
+        <RelativePanel Grid.Row="2"
+                       Background="Gainsboro">
+            <TextBlock Name="ItemsTextBlock"
+                       Text="A"
+                       FontSize="48"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       Margin="20,10,10,10" />
+            <TextBlock Text="B"
+                       FontSize="48"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"
+                       RelativePanel.AlignVerticalCenterWith="ItemsTextBlock" />
+            <TextBlock Text="C"
+                       FontSize="48"
+                       RelativePanel.AlignRightWithPanel="True"
+                       RelativePanel.AlignVerticalCenterWith="ItemsTextBlock"
+                       Margin="0,0,20,0" />
+        </RelativePanel>
+    </Grid>
+</Page>
+
+
+
+
+
+
+
