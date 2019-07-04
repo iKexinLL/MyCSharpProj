@@ -16,9 +16,11 @@ namespace MyTest
         static void Main(string[] args)
         {
 
-            AttributeTestOne.TestStart();
+            ReflectionTest3.TestStart();
+            // AttributeTestOne.TestStart();
 
-            SearchPics(@"C:\Users\Administrator\Desktop");
+            // Obsolete特性测试
+            // SearchPics(@"C:\Users\Administrator\Desktop");
 
             // TestThis.TestStart();
 
@@ -30,7 +32,8 @@ namespace MyTest
             // TaskTest5.TestStart();
             // ThreadPoolTest.TestStart();
             // ThreadTest2.TestStart();
-            // ReflectionTest2.TestStart();
+            // ReflectionTest.TestStart();
+            // ReflectionTest2.TestStart(new string[] {"/help", "/out"});
             // Task.Delay(100);   
             // ThreadTest.TestStart();
             // Console.WriteLine(Test("xukexin", 3));
