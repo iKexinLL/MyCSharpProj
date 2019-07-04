@@ -9,24 +9,25 @@ namespace MyTest
     {
         public static void TestStart()
         {
-            DateTime dateTime = new DateTime();
-            // GetType()只能用于对象实例
-            Type type = dateTime.GetType();
-            // Type type2 = Int64.GetType();
+            var datetime = new DateTime();
 
-            foreach (System.Reflection.PropertyInfo property in 
-                type.GetProperties())
+            // GetType: Gets the System.Type of the current instance.
+            // current instance 说明只能再实例上使用.
+            var type = datetime.GetType();
+            
+            foreach (var property in type.GetProperties())
             {
                 Console.WriteLine(property.Name);
             }
 
             // 使用typeof()创建System.Type实例
-            ThreadPriorityLevel priority;
-            priority = (ThreadPriorityLevel)Enum.Parse(
+            ThreadPriorityLevel priority = (ThreadPriorityLevel)Enum.Parse(
                 typeof(ThreadPriorityLevel), "Idle"
             );
 
-            Console.WriteLine(priority.ToString());
+            Console.WriteLine($"(int)ThreadPriorityLevel.Idle is {(int)ThreadPriorityLevel.Idle}");
+            Console.WriteLine($"ThreadPriorityLevel.Idle is {priority}");
+            Console.WriteLine($"ThreadPriorityLevel.Idle.ToString is {priority.ToString()}");
         }
     }
 }

@@ -6,6 +6,7 @@ namespace MyTest
 {
     public partial class ReflectionTest2
     {
+        // in main method: ReflectionTest2.TestStart(new string[] {"/help", "/out"});
         public static void TestStart(string[] args)
         {
             string errorMessage;
