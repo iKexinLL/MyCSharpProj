@@ -1,0 +1,9 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "E:\\xkx\\c_sharp\\MyTest\\EntityFrameworkTest\\MvcMovie.db",
+            "dialect": "SQLite",
+            "name": "123"
+        }
+    ]
+}
