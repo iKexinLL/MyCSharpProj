@@ -16,6 +16,7 @@ namespace MyTest
         static void Main(string[] args)
         {
 
+            ThreadTest3.TestStart();
             // ReflectionTest3.TestStart();
             // AttributeTestOne.TestStart();
 
@@ -33,7 +34,7 @@ namespace MyTest
             // ThreadPoolTest.TestStart();
             // ThreadTest2.TestStart();
             // ReflectionTest.TestStart();
-            ReflectionTest2.TestStart();
+            // ReflectionTest2.TestStart();
             // Task.Delay(100);   
             // ThreadTest.TestStart();
             // Console.WriteLine(Test("xukexin", 3));
