@@ -31,7 +31,5 @@ namespace MyTest
 
             task.Wait();
         }
-
-        
     }
 }

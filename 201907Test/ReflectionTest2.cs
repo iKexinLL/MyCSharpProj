@@ -1,14 +1,31 @@
 using System;
 using System.Diagnostics;
 using System.Reflection;
-
+// 
 namespace MyTest
 {
     public partial class ReflectionTest2
     {
+        public static void TestStart()
+        {
+            var strs = new string[] {"/help", @"/out:E:\xkx\OnGit\MyCSharpProj\201907Test\Program.cs", "/Priority:Idle"};
+            TestStart(strs);
+            
+            var strs2 = new string[] {@"/out:E:\xkx\OnGit\MyCSharpProj\201907Test\Program.cs", "/Priority:Idle"};
+            TestStart(strs2);
+            
+            var strs3 = new string[] {"/Priority:Idle"};
+            TestStart(strs3);
+        }
         // in main method: ReflectionTest2.TestStart(new string[] {"/help", "/out"});
         public static void TestStart(string[] args)
         {
+            foreach (var i in args)
+            {
+                Console.Write(i + ";");
+            }
+            Console.WriteLine();
+
             string errorMessage;
 
             CommandLineInfo commandLine = new CommandLineInfo();
@@ -27,7 +44,7 @@ namespace MyTest
             {
                 if (commandLine.Priority != ProcessPriorityClass.Normal)
                 {
-                    // Change thread priority
+                    Console.WriteLine(@"this is commandLine.Priority: {commandLine.Priority}");
                 }
             }
         }
