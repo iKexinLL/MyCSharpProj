@@ -4,6 +4,10 @@ using System.Threading;
 
 namespace MyTest
 {
+    /* 
+        这个例子可以说明Start以及Join的作用
+        当新线程Start()后,直到Join()才回到主线程继续
+    */
     public class ThreadTest3
     {
         private static void ThreadFuncOne()
@@ -28,6 +32,7 @@ namespace MyTest
             {
                 if (j == 10)
                 {
+                    Console.WriteLine($"j == 10");
                     newThread.Start();
                     newThread.Join();
                 }
@@ -35,6 +40,7 @@ namespace MyTest
                 {
                     Console.WriteLine(Thread.CurrentThread.Name + "   j =  " + j);
                 }
+                // newThread.Join();
             }
             // Console.Read();
         }
