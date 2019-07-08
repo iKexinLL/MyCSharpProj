@@ -15,8 +15,9 @@ namespace MyTest
     {
         static void Main(string[] args)
         {
-
-            ThreadTest3.TestStart();
+            // GetACharacterFromCursorOnCSharp.TestStart();
+            TaskTest7.TestStart();
+            // ThreadTest3.TestStart();
             // ReflectionTest3.TestStart();
             // AttributeTestOne.TestStart();
 
@@ -42,7 +43,7 @@ namespace MyTest
             // Console.WriteLine(null, 3);
             
             Console.WriteLine("End");
-            Console.ReadKey();
+            // Console.ReadKey();
         }
 
         public static string Test(string value, int length)
