@@ -53,7 +53,10 @@ namespace MyTest
         /// <summary>
         /// 当运行Task task = WriteWebRequestSizeAsync(url);时,在await之前,没有返回task
         /// 知道遇到了第一个await,然后task.wait生效,开始输出点
-        /// 运行完毕第一个task后,会继续运行,直至代码段结束
+        /// 运行完毕第一个task后,会继续运行,
+        /// 如果遇到下个await,仍旧会返回task
+        /// 直至代码段结束
+        /// 可以说,task.Wait(100)会仅等待await的结果
         /// </summary>
         public static void TestStart()
         {
