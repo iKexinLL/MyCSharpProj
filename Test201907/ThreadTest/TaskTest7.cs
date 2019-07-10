@@ -56,7 +56,11 @@ namespace MyTest
         /// 运行完毕第一个task后,会继续运行,
         /// 如果遇到下个await,仍旧会返回task
         /// 直至代码段结束
-        /// 可以说,task.Wait(100)会仅等待await的结果
+        /// 可以说,task.Wait(100)会仅等待await的结果.
+        /// 注意，无论将await放到循环中，还是单独地写，它们都会连续地、一个接一个地执行，
+        /// 而且顺序和从调用线程中调用的顺序一样。
+        /// 底层实现是用语义上等价于Task.ContinueWith()的方式把它们串接到一起，
+        /// 只是await操作符之间的代码全都在调用者的同步上下文中执行。
         /// </summary>
         public static void TestStart()
         {
