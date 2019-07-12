@@ -15,7 +15,8 @@ namespace MyTest
     {
         static void Main(string[] args)
         {
-            ParallelTestClass.TestStart();
+            ParallelTestClassTwo.TestStart();
+            // ParallelTestClass.TestStart();
             // GetACharacterFromCursorOnCSharp.TestStart();
             // TaskTest7.TestStart();
             // ThreadTest3.TestStart();
