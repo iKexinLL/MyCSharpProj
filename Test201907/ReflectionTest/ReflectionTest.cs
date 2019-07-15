@@ -25,6 +25,11 @@ namespace MyTest
                 typeof(ThreadPriorityLevel), "Idle"
             );
 
+            foreach (var item in Enum.GetNames(typeof(ThreadPriorityLevel)))
+            {
+                Console.WriteLine(item);
+            }
+
             Console.WriteLine($"(int)ThreadPriorityLevel.Idle is {(int)ThreadPriorityLevel.Idle}");
             Console.WriteLine($"ThreadPriorityLevel.Idle is {priority}");
             Console.WriteLine($"ThreadPriorityLevel.Idle.ToString is {priority.ToString()}");
