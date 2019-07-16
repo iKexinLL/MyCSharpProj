@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace MyTest
 {
@@ -65,6 +66,32 @@ namespace MyTest
             return new int[2];
         }
 
+        public static int TitleToNumber(string s) {
+            /*
+                最初的想法有些错误,自己没有明白计算方式.
+                比如AA则包含了A-Z以及AA共计27个字符
+                比如BA则包含了A-Z,AA-AZ以及BA共计53个字符
+                比如CA则包含了A-Z,AA-AZ,BA-BZ以及CA共计(26 * 3 + 1)个字符
+                ....
+                比如ZA则包含了(26 * (26 + 0) + 1)个字符
+                比如AAA则包含了(26 * (26 + 1) + 1)个字符
+                那么AAAA包含了
+                (26 * (length - 1)) 
+
+                该题目的意思其实就是26进制转十进制，其中1~26分别用A~Z表示，其实就是个进制转化问题
+             */
+            var tmp = s.ToCharArray();
+            int res = 0;
+            int length = tmp.Length;
+            foreach(var midChar in tmp.Select((i, n) => new {value = i, index = n}))
+            {
+                var midValue = midChar.value - 'A' + 1;
+                res += (int)Math.Pow(26, --length) * midValue;
+            }
+
+            return res;
+        }
+
         public static void TestStart()
         {
             
@@ -74,11 +101,14 @@ namespace MyTest
             int[] nums = {2, 7, 11, 15};
             int target = 17;
 
+
             TestTwoSumHandler += TwoSum;
             TestTwoSumHandler += TwoSum2;
             TestTwoSumHandler += TwoSum3;
 
-            CallMethodInEvent(nums, target);
+            Console.WriteLine(TitleToNumber("ZY"));
+
+            // CallMethodInEvent(nums, target);
             // var res = TestTwoSumHandler(nums, target);
             // Console.WriteLine(res[0] + ", " + res[1]);
             // sw.Stop();
