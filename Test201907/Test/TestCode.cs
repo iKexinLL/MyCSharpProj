@@ -28,6 +28,23 @@ namespace MyTest
             return new int[2];
         }
 
+        public static int[] TwoSum2(int[] nums, int target)
+        {
+            cnt += 1;
+            Console.WriteLine($"cnt is {cnt}");
+            // 反过来使用,由于知道了结果,那么用结果结果减去当前值,然后判断结果是否在nums中即可.
+            for (int i = 0; i < nums.Length; i++)
+            {
+                var temp = target - nums[i];
+                var res = Array.IndexOf(nums, temp);
+                if (res != -1)
+                {
+                    return new int[] {i, res};
+                }
+            }
+            return new int[2];
+        }
+
         public static void TestStart()
         {
             
@@ -38,10 +55,11 @@ namespace MyTest
             int target = 26;
 
             TestTwoSumHandler += TwoSum;
-            TestTwoSumHandler += TwoSum;
+            TestTwoSumHandler += TwoSum2;
 
-            var res = TestTwoSumHandler(nums, target);
-            Console.WriteLine(res[0] + ", " + res[1]);
+            CallMethodInEvent(nums, target);
+            // var res = TestTwoSumHandler(nums, target);
+            // Console.WriteLine(res[0] + ", " + res[1]);
             // sw.Stop();
 
             // Console.WriteLine($"run time is {sw.ElapsedMilliseconds}");
@@ -49,6 +67,17 @@ namespace MyTest
             // var ac = new Func<int[], int, int[]>(TwoSum);
             // res = ac(nums, target);
             // Console.WriteLine(res[0] + ", " + res[1]);
+        }
+
+        public static void CallMethodInEvent(int[] nums, int target)
+        {
+            var delegateArray = TestTwoSumHandler.GetInvocationList();
+            foreach (var i in delegateArray)
+            {
+                var midMethod = (Func<int[],int,int[]>)i;
+                var res = midMethod(nums, target);
+                Console.WriteLine(res[0] + ", " + res[1]);
+            }
         }
     }
 }
