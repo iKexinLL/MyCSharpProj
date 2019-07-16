@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace MyTest
@@ -45,6 +46,25 @@ namespace MyTest
             return new int[2];
         }
 
+        public static int[] TwoSum3(int[] nums, int target)
+        {
+            cnt += 1;
+            Console.WriteLine($"cnt is {cnt}");
+            // 反过来使用,由于知道了结果,那么用结果结果减去当前值,然后判断结果是否在nums中即可.
+            // 但是array查找效率有些低,那么使用其他方式
+            // 最佳答案里面用的是Dictionary
+            Dictionary<int, int> intStore = new Dictionary<int, int>();
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (intStore.ContainsKey(target - nums[i]))
+                {
+                    return new int[] {intStore[target -nums[i]], i};
+                }
+                intStore[nums[i]] = i;
+            }
+            return new int[2];
+        }
+
         public static void TestStart()
         {
             
@@ -52,10 +72,11 @@ namespace MyTest
             // sw.Start();
 
             int[] nums = {2, 7, 11, 15};
-            int target = 26;
+            int target = 17;
 
             TestTwoSumHandler += TwoSum;
             TestTwoSumHandler += TwoSum2;
+            TestTwoSumHandler += TwoSum3;
 
             CallMethodInEvent(nums, target);
             // var res = TestTwoSumHandler(nums, target);
