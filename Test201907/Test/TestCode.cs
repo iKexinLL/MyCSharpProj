@@ -99,7 +99,7 @@ namespace MyTest
             // sw.Start();
 
             int[] nums = {2, 7, 11, 15};
-            int target = 17;
+            // int target = 17;
 
 
             TestTwoSumHandler += TwoSum;
