@@ -42,6 +42,7 @@ namespace MyTest.Spider
                 var htmlDoc = new HtmlDocument();
                 htmlDoc.LoadHtml(e.PageSource);
 
+                // htmlDoc.DocumentNode.SelectNodes("//ul[@class='lists']/li")[1].Attributes["data-title"].Value
                 var file_path = @"e:\temp\douban.txt";
                 using (StreamWriter sw = new StreamWriter(file_path, false, Encoding.UTF8))
                 {
