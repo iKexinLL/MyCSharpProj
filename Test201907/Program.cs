@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using MyTest.FileTestFolder;
 using MyTest.EntityFrameworkTest;
 using MyTest.AttributeTest;
+using MyTest.Spider;
 using System.IO;
 using System.Diagnostics;
 // using MyTest;
@@ -15,7 +16,10 @@ namespace MyTest
     {
         static void Main(string[] args)
         {
-            TestCode.TestStart();
+
+            SpiderTest.TestStart();
+
+            // TestCode.TestStart();
             // ParallelTestClassTwo.TestStart();
             // ParallelTestClass.TestStart();
             // GetACharacterFromCursorOnCSharp.TestStart();
