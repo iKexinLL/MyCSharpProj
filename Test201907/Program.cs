@@ -17,7 +17,8 @@ namespace MyTest
         static void Main(string[] args)
         {
 
-            SpiderTest.TestStart();
+            TestDownloadPic.TestStart();
+            // SpiderTest.TestStart();
 
             // TestCode.TestStart();
             // ParallelTestClassTwo.TestStart();
