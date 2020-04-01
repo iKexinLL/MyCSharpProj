@@ -9,6 +9,7 @@ using MyTest.Spider;
 using System.IO;
 using System.Diagnostics;
 // using MyTest;
+using Test201907.Test;
 
 namespace MyTest
 {
@@ -17,7 +18,8 @@ namespace MyTest
         static void Main(string[] args)
         {
 
-            TestDownloadPic.TestStart();
+            SingleLinkTestStart.TestStart();
+            // TestDownloadPic.TestStart();
             // SpiderTest.TestStart();
 
             // TestCode.TestStart();
